@@ -168,3 +168,31 @@ function atualizaPlacar() {
     divPlacar.innerHTML=html
     atualizaCartas()
 }
+function atualizaCartas() {
+    var divCartas=document.getElementById('quantidade-cartas')
+    var htmlCartas=`Cada jogador tem ${cartasUsuario.length} cartas sobrando`
+    divCartas.innerHTML=htmlCartas
+}
+function proximaRodada() {
+    pontosUsuario=0;
+    pontosMaquina=0;
+    cartasMaquina = [madeiraBruta, tabuaMadeira, lajeDoEnd, Vidro, Obsidiana, TijolosDoNether, bedrock]
+    cartasUsuario = [madeiraBruta, tabuaMadeira, lajeDoEnd, Vidro, Obsidiana, TijolosDoNether, bedrock]
+    imagem.innerHTML = ''
+    nome.innerHTML = ''
+    opcoes.innerHTML = ''
+    resultado.innerHTML=''
+    document.getElementById("btnSortear").disabled = false
+    document.getElementById("btnJogar").disabled = true
+    document.getElementById("btnProximaRodada").disabled = true
+    atualizaPlacar()
+}
+
+function fimDaRodada() {
+    if (cartasMaquina.length==5 || cartasUsuario.length==0) {
+        document.getElementById("btnSortear").disabled = true
+        document.getElementById("btnJogar").disabled = true
+        document.getElementById("btnProximaRodada").disabled = false
+    }
+    
+}
