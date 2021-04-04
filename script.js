@@ -82,7 +82,7 @@ function sortearCarta() {
     var numCartaUsuario = Math.floor(Math.random() * numMAXCartasU);
     var cont = 0;
     while (cartasUsuario[numCartaUsuario] == cartasMaquina[numCartaMaquina]) {
-        if (cont==10) {
+        if (cont==5) {
             if (cartasUsuario[numCartaUsuario]!=bedrock) {
                 cartasUsuario.push(bedrock)
             }
