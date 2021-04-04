@@ -189,7 +189,7 @@ function proximaRodada() {
 }
 
 function fimDaRodada() {
-    if (cartasMaquina.length==5 || cartasUsuario.length==0) {
+    if (cartasMaquina.length==0 || cartasUsuario.length==0) {
         document.getElementById("btnSortear").disabled = true
         document.getElementById("btnJogar").disabled = true
         document.getElementById("btnProximaRodada").disabled = false
