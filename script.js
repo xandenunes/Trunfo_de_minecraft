@@ -37,10 +37,20 @@ function sortearCarta() {
     }
     cartaMaquina = cartas[numCartaMaquina];
     cartaUsuario = cartas[numCartaUsuario];
-    console.log(cartaMaquina);
-    console.log(cartaUsuario);
 
     document.getElementById("btnSortear").disabled = true
     document.getElementById("btnJogar").disabled = false
     exbirOpcoes();
+}
+function exbirOpcoes() {
+    var opcoes = document.getElementById('opcoes');
+    var nome = document.getElementById('nomeCarta');
+    var imagem=document.getElementById('imagemCarta');
+    var opcoesTexto = '';
+    for (var atributo in cartaUsuario.atributos) {
+        opcoesTexto += `<input type='radio' name='atributo' value='${atributo}'>` + atributo
+    }
+    imagem.innerHTML=`<img src="${cartaUsuario.img}">`
+    nome.innerHTML=`Sua carta é a ${cartaUsuario.nome}`
+    opcoes.innerHTML = opcoesTexto
 }
