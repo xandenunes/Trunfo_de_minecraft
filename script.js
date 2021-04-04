@@ -48,7 +48,7 @@ function exbirOpcoes() {
     var imagem=document.getElementById('imagemCarta');
     var opcoesTexto = '';
     for (var atributo in cartaUsuario.atributos) {
-        opcoesTexto += `<input type='radio' name='atributo' value='${atributo}'>` + atributo
+        opcoesTexto += `<input type='radio' name='atributo' value='${atributo}'> ${atributo}:${cartaUsuario.atributos[atributo]} <br>`
     }
     imagem.innerHTML=`<img src="${cartaUsuario.img}">`
     nome.innerHTML=`Sua carta é a ${cartaUsuario.nome}`
