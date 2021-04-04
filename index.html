@@ -14,16 +14,19 @@
     <div class="container">
         <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-super-trunfo.png" class="page-logo"
             alt="">
-        <h1 class="page-title">Super Trunfo</h1>
+        <h1 class="page-title">Super Trunfo dos Blocos do Minecraft</h1>
 
         <button onclick="sortearCarta()" id="btnSortear">Sortear carta</button>
 
         <form id="form">
+            <h2 id="nomeCarta"></h2> <div id="imagemCarta"></div>
             <h2>Escolha o seu atributo</h2>
             <div class="opcoes" id="opcoes"></div>
             <button type="button" id="btnJogar" onclick="jogar()" disabled="false">Jogar</button>
         </form>
+        <h2 id="resultado"></h2>
     </div>
+    
     <script src="script.js"></script> <!-- linkando com o arquivo js -->
 </body>
 
