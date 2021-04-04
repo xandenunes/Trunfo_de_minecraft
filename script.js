@@ -54,3 +54,25 @@ function exbirOpcoes() {
     nome.innerHTML=`Sua carta é a ${cartaUsuario.nome}`
     opcoes.innerHTML = opcoesTexto
 }
+function atributoSelecionado() {
+    var selecao = document.getElementsByName('atributo')
+    for (let i = 0; i < selecao.length; i++) {
+        if (selecao[i].checked) {
+            return selecao[i].value
+        }
+    }
+}
+function jogar() {
+    var selecionado=atributoSelecionado();
+    var resultado=document.getElementById('resultado')
+    if (cartaUsuario.atributos[selecionado]>cartaMaquina.atributos[selecionado]) {
+        resultado.innerHTML=`Você ganhou. O poder do seu atributo foi ${cartaUsuario.atributos[selecionado]} e do seu oponente foi ${cartaMaquina.atributos[selecionado]}`
+    }
+    else if (cartaUsuario.atributos[selecionado]==cartaMaquina.atributos[selecionado]) {
+        resultado.innerHTML=`Você empatou. O poder do seu atributo foi ${cartaUsuario.atributos[selecionado]}`
+    }
+    else{
+        resultado.innerHTML=`Você perdeu. O poder do seu atributo foi ${cartaUsuario.atributos[selecionado]} e do seu oponente foi ${cartaMaquina.atributos[selecionado]}`
+    }
+}
+
