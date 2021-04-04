@@ -19,12 +19,19 @@
         <button onclick="sortearCarta()" id="btnSortear">Sortear carta</button>
 
         <form id="form">
+            <div id="placar"></div>
+            <div id="quantidade-cartas"></div>
             <h2 id="nomeCarta"></h2> <div id="imagemCarta"></div>
             <h2>Escolha o seu atributo</h2>
             <div class="opcoes" id="opcoes"></div>
             <button type="button" id="btnJogar" onclick="jogar()" disabled="false">Jogar</button>
+            <h2 id="resultado"></h2>
+            <div id="resultadoDiv"></div>
+            <button type="button" id="btnProximaRodada" onclick="proximaRodada()" disabled="true">Proxima
+                rodada</button>
         </form>
-        <h2 id="resultado"></h2>
+        
+        
     </div>
     
     <script src="script.js"></script> <!-- linkando com o arquivo js -->

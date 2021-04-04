@@ -72,3 +72,6 @@ h2 {
 h1{
   color: #ffffff;
 }
+#placar, #quantidade-cartas {
+  color: white;
+}
